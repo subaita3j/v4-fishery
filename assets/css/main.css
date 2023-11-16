@@ -223,6 +223,9 @@ button {
   max-width: 100px; 
   height: auto;
   vertical-align: center;
+  padding: 0%;
+  margin-top: 0%;
+  margin-bottom: 0%;
 }
 
 .nav__toggle {
@@ -233,7 +236,7 @@ button {
 
 /* change header background */
 .scroll-header {
-  background-color: white;
+  background: rgba(255, 255, 255, 0.15);
   box-shadow: 0 1px 4px hsla(238, 100%, 66%, 0.1);
   opacity: 80%;
 }
@@ -271,16 +274,16 @@ button {
 }
 
 .nav__link.active-link {
-  color: #fff;
+  background: rgba(255, 255, 255, 0.15);
 }
 
 .nav__link:hover {
-  color: #fff;
+  background: rgba(255, 255, 255, 0.15);
 }
 
 .nav__close {
   font-size: 2rem;
-  color: #fff;
+  background: rgba(255, 255, 255, 0.15);
   position: absolute;
   top: 1rem;
   right: 1rem;
