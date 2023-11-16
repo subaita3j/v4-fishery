@@ -4,30 +4,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!--=============== BOXICONS ===============-->
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <!--=============== CSS ===============-->
+
     <link rel="stylesheet" href="./assets/css/main.css" />
 <link rel="icon" type="image/x-icon" href="./assets/media/favicon.ico"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
     <title>V4 Fishery </title>
     
 
   </head>
   <body>
     <header class="header" id="header">
-      <nav class="nav container">
-        <div class="nav__left">
-          <a href="#home" class="nav__link">Home</a>
-          <a href="#place" class="nav__link">About</a>
-          <a href="#products" class="nav__link">Sea Fish</a>
-          <a href="#special" class="nav__link">Fresh Water Fish</a>
-          <a href="#contacts" class="nav__link">Contact</a>
+      <nav class="navbar navbar-expand-md container">
+        <div class="navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="#home" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#place" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="#products" class="nav-link">Sea Fish</a>
+            </li>
+            <li class="nav-item">
+              <a href="#special" class="nav-link">Fresh Water Fish</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contacts" class="nav-link">Contact</a>
+            </li>
+          </ul>
         </div>
     
-        <div class="nav__toggle" id="nav-toggle">
+        <div class="navbar-toggler" id="nav-toggle" data-toggle="collapse" data-target="#navbarNav">
           <i class="bx bx-grid-alt"></i>
         </div>
       </nav>
