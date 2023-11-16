@@ -147,6 +147,11 @@ button {
     z-index: 99;
   }
 
+  .header-profile {
+    max-width: 150px;
+    height: auto;
+  }
+
 .nav {
   display: flex;
   align-items: center;
