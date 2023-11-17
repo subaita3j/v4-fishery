@@ -14,420 +14,590 @@
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="./assets/css/main.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="icon" type="image/x-icon" href="./assets/media/favicon.ico"/>
     <title>WE4 Fishery </title>
-    
+    <style>
+
+    .navbar {
+        padding-top: 50px; /* Adjust the value as needed */
+    }
+
+    .nav-link {
+      color:black;
+    }
+
+    .navbar-brand img {
+        position: absolute;
+        top: 30%;
+        transform: translateY(-20%);
+        max-height: 320px; 
+        width: auto; 
+    }
+
+    @media (max-width: 576px) {
+    .custom-margin {
+      margin-top: 110%; 
+    }
+  }
+
+  @media (min-width: 577px) and (max-width: 700px) { 
+    .custom-margin {
+      margin-top:43%; 
+    }
+  }
+   @media (min-width: 701px) and (max-width: 991px) { 
+    .custom-margin {
+      margin-top:43%; 
+    }
+  }
+
+  @media (min-width: 992px) { 
+    .custom-margin {
+      margin-top: 35%; 
+    }
+  }
+
+  .products__container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .image-div {
+      width: auto;
+      height: 300px;
+      border-radius:30px;
+      margin: 2px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      
+    }
+
+    .image-div img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius:30px;
+      transition: transform 0.3s;
+    }
+
+   
+
+  .image-div:hover img {
+    transform: scale(1.1);
+  }
+
+  #typed-text {
+      overflow: hidden; 
+      white-space: nowrap; 
+      border-right: 2px solid #000; 
+      animation: typing 2s steps(40, end), blink-caret 0.75s step-end infinite;
+    }
+
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+
+    @keyframes blink-caret {
+      from,
+      to {
+        border-color: transparent;
+      }
+      50% {
+        border-color: #000;
+      }
+    }
+
+
+   
+  
+    .image-description {
+      font-size: 16px;
+  
+    }
+
+   
+    @media screen and (max-width: 600px) {
+      .image-description {
+        display: none;
+      }
+    }
+
+    .img_title {
+      font-size: 25px;
+     
+    }
+
+   
+    @media screen and (max-width: 600px) {
+      .img_title {
+        display: none;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .col-md-1,
+      .col-md-3,
+      .col-md-6 {
+        display: block;
+        width: 100%;
+      }
+    }
+
+ 
+    @media (max-width: 767px) {
+      .col-sm-1,
+      .col-sm-5 {
+        display: block;
+        width: 60%;
+        margin: 0 auto;
+      }
+    }
+
+    @media only screen and (max-width: 450px) {
+    .image-div {
+      max-height: 150px; /* Adjust the max-height as needed for smaller screens */
+    }
+  }
+
+  /* Media query for smaller screens */
+  @media only screen and (max-width: 450px) {
+    .hero__button {
+      padding: 5px 10px;
+      margin-top:180px;
+      margin-right:20px; /* Adjust the padding for smaller screens */
+    }
+  }
+
+  @media only screen and (max-width: 450px) {
+    .header-profile {
+      max-width: 50%;
+      margin-left:-30px; /* Adjust the width as needed for smaller screens */
+    }
+  }
+
+  @media only screen and (max-width: 450px) {
+    .img-fluid {
+      max-height: 150px; /* Adjust the max-height as needed for smaller screens */
+    }
+  }
+
+      </style>
 
   </head>
 
-  <header class="header" id="header">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light container">
-      <a class="navbar-brand" href="#">
-        <img class="header-profile" src="./assets/media/FISHING_MANIA_YOUTUBE_CHANNEL_LOGO-removebg-preview (2).png" alt="Logo">
-      </a>
+  <body>
+   <header class="header" id="header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light container-fluid">
+        <a class="navbar-brand" href="#">
+            <img class="header-profile img-fluid" src="./assets/media/FISHING_MANIA_YOUTUBE_CHANNEL_LOGO-removebg-preview (2).png" alt="Logo">
+        </a>
 
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#place">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#products">Sea Fish</a></li>
-          <li class="nav-item"><a class="nav-link" href="#special">Fresh Water Fish</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contacts">Contact</a></li>
-        </ul>
-      </div>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav nav-fill" >
+                <li class="nav-item mx-2 mx-lg-4"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item mx-2 mx-lg-4"><a class="nav-link" href="#place">About</a></li>
+                <li class="nav-item mx-2 mx-lg-4"><a class="nav-link" href="#products">Sea Fish</a></li>
+                <li class="nav-item mx-2 mx-lg-4"><a class="nav-link" href="#special">Fresh Water Fish</a></li>
+                <li class="nav-item mx-2 mx-lg-4"><a class="nav-link" href="#contacts">Contact</a></li>
+            </ul>
+        </div>
     </nav>
-  </header>
+</header>
+
+  
+<main class="main" id="main">
+  <section
+    class="hero section"
+    id="home"
+    style="background-image: url('./assets/media/istockphoto-1405392637-1024x1024-transformed\ \(1\).jpeg')"
+  >
+   
+    <div class="hero__content">
+      <h1 class="hero__title">
+        <p style="color:white; background-color:darkblue" id="typed-text">This is a fish text</p> <br />
+         <b>LOREM IPSUM <b></b><br />
+        <b><span> DOLOR SIt </span> <br /></b>
+        <b>
+          AMET ACCUMSAN</b>
+
+      </h1>
+      <div class="d-flex justify-content-center custom-margin">
+        <button class="hero__button">Contact</button>
+        <button class="hero__button">Saviorplus</button>
+      </div>
+    </div>
+  </section>
+  
+  <section class="place section" id="place">
+    <div class="place__container container">
+      <div class="place__content grid">
+        <div class="place__images">
+          <img
+            src="./assets/media/about.jpg"
+            alt=""
+            class="place__img-big"
+          />
+        </div>
+        <div class="place__data">
+          <h2 class="section__title">
+            <b>Fish restaurant</b><br />
+          </h2>
+          <h5 class="place__title">Lorem Ipsum is simply <br />
+            dummy text of the printing and typesetting industry.<br/>
+             Lorem Ipsum.</h5>
+          <p class="place__description">
+            Lorem Ipsum is simply dummy text of
+            <br/> the printing and typesetting industry. 
+            <br/>Lorem Ipsum has been the industry's 
+            <br/>standard dummy text ever since the 1500s, 
+            <br/>when an unknown printer took a galley of type 
+            <br/>and scrambled it to make a type specimen book. 
+            <br/>It has survived not only five centuries, 
+            <br/>but also the leap into electronic typesetting,
+            <br/> remaining essen.
+          </p>
+          <button class="place__button">Saviorplus</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <div class="container">
+    <div class="special section" id="special">
+        <div class="special__container">
+            <div class="special__box">
+                <h2 class="section__title">
+                    NO’S PRESTATIONS
+                </h2>
+                <p>
+                    It is a long established fact that
+                     a reader  will be distracted
+                      by the readable content
+                     of a page.
+                </p>
+            </div>
+
+            <div class="special__category">
+               
+                    <div class="image-container col-md-4 col-sm-12">
+                        <img src="./assets/media/fish4.jpg" alt="" class="special__img" />
+                        <div class="image-overlay">
+                            <div>
+                                <img src="./assets/media/bw_fish_stencil-removebg-preview.png" alt="fish image" class="btnimg" />
+                                <h5 class="img_title">PRESTATION 01</h5>
+                            </div>
+                            <p class="image-description">It is a long established fact that a reader
+                               will be distracted by the readable 
+                               content of a page.</p>
+                               <div style="text-align:center">
+                            <button class="btn btn-primary" >Click here</button>
+                            </div>
+                        </div>
+                    </div>
+               
+                
+                    <div class="image-container col-md-4 col-sm-12">
+                        <img src="./assets/media/fish6.jpg" alt="" class="special__img" />
+                        <div class="image-overlay">
+                            <div>
+                                <img src="./assets/media/bw_straight_fish-removebg-preview.png" alt="fish image" class="btnimg" />
+                                <h5 class="img_title">PRESTATION 02</h5>
+                            </div>
+                            <p class="image-description">It is a long established fact that a reader will be distracted by the readable content of a page.</p>
+                            <div style="text-align:center">
+                              <button class="btn btn-primary" >Click here</button>
+                              </div>
+                        </div>
+                    </div>
+               
+                
+                    <div class="image-container col-md-4 col-sm-12">
+                        <img src="./assets/media/fish8.jpg" alt="" class="special__img" />
+                        <div class="image-overlay">
+                            <div>
+                                <img src="./assets/media/bw_fish_turning_stencil-removebg-preview.png" alt="fish image" class="btnimg" />
+                                <h5 class="img_title">PRESTATION 03</h5>
+                            </div>
+                            <p class="image-description">It is a long established fact that a reader will be distracted by the readable content of a page.</p>
+                            <div style="text-align:center">
+                              <button class="btn btn-primary" >Click here</button>
+                              </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+   <br id="products">
+   <br> 
+<br >
+<br>
+<br>
+
+
+  
+<h2 class="section__title">
+  NO’S GALERIES
+</h2>
+<p >
+  It is a long established fact that a reader will be<br/>
+  distracted by the readable content of a page.
+</p>
+<button class="view-more-button" onclick="scrollDown()">View More</button>
+
+<div class="container-fluid" style="margin-top:2%; margin-left:5%">
+  <div class="row mx-auto">
+    <div class="col-md-1 col-sm-1"></div>
+    <div class="col-md-3 col-sm-5">
+      <div class="image-div">
+        <img src="./assets/media/fish1.jpg" alt="Image 1" class="img-fluid">
+      </div>
+    </div>
+
+    <div class="col-md-6 col-sm-5">
+      <div class="image-div">
+        <img src="./assets/media/fish.jpg" alt="Image 2" class="img-fluid">
+      </div>
+    </div>
+
+    <div class="col-md-1 col-sm-1"></div>
+  </div>
+  </div>
+
+
+<div class="container-fluid" style="margin-top:2%; margin-left:5% ">
+  <div class="row mx-auto">
+    <div class="col-md-1 col-sm-1"></div>
+    <div class="col-md-3 col-sm-5">
+      <div class="image-div">
+        <img src="./assets/media/fish1.jpg" alt="Image 1" class="img-fluid">
+      </div>
+    </div>
+
+    <div class="col-md-3 col-sm-5">
+      <div class="image-div">
+        <img src="./assets/media/fish3.jpg" alt="Image 2" class="img-fluid">
+      </div>
+    </div>
+
+    <div class="col-md-3 col-sm-5">
+      <div class="image-div">
+        <img src="./assets/media/fish4.jpg" alt="Image 2" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-md-1 col-sm-1"></div>
+    </div>
+    </div>
+
+    <div class="container-fluid" style="margin-top:2%; margin-left:5% ">
+      <div class="row mx-auto">
+        <div class="col-md-1 col-sm-1"></div>
+        <div class="col-md-3 col-sm-5">
+          <div class="image-div">
+            <img src="./assets/media/fish5.jpg" alt="Image 1" class="img-fluid">
+          </div>
+        </div>
+    
+        <div class="col-md-3 col-sm-5">
+          <div class="image-div">
+            <img src="./assets/media/fish6.jpg" alt="Image 2" class="img-fluid">
+          </div>
+        </div>
+    
+        <div class="col-md-3 col-sm-5">
+          <div class="image-div">
+            <img src="./assets/media/fish11.jpg" alt="Image 2" class="img-fluid">
+          </div>
+        </div>
+        <div class="col-md-1 col-sm-1"></div>
+        </div>
+        </div>
+
+        <div class="container-fluid" style="margin-top:2%; margin-left:5% ">
+          <div class="row mx-auto">
+            <div class="col-md-1 col-sm-1"></div>
+            <div class="col-md-6 col-sm-5">
+              <div class="image-div">
+                <img src="./assets/media/fish7.jpg" alt="Image 1" class="img-fluid">
+              </div>
+            </div>
+        
+            <div class="col-md-3 col-sm-5">
+              <div class="image-div">
+                <img src="./assets/media/fish8.jpg" alt="Image 2" class="img-fluid">
+              </div>
+            </div>
+            <div class="col-md-1 col-sm-1"></div>
+  </div>
+</div>
+</section>
+
+<section class="blog section" id="blog">
+  <div class="blog__container container text-center">
+    <h2 class="section__title">NO’S AVIS CLIENTS</h2>
+    <h3>
+        It is a long established fact that a reader will<br/> 
+        be distracted by the readable content of a page.
+    </h3>
+
+    <div class="blog__content row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center">
+        <div class="col">
+            <div class="blog__card">
+                <div class="blog__image">
+                    <img src="./assets/media/img1.jpg" alt="" class="img-fluid" />
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="blog__card">
+                <div class="blog__image">
+                    <img src="./assets/media/img2.jpg" alt="" class="img-fluid" />
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="blog__card">
+                <div class="blog__image">
+                    <img src="./assets/media/img3.jpg" alt="" class="img-fluid" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button class="view-more-button">View More</button>
+  </div>
+
+</main>
+
+<footer class="footer" id="contacts" style="background-color: rgb(91, 125, 165);
+  ; border-top-left-radius: 300px;">
+    <div class="footer__container container">
+      <div class="footer__content">
+        <!-- Title Section -->
+        <div class="footer__title-section">
+          <h2 class="footer__main-title">WE4 Fishery
+            <style>
+              @import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@700&family=Fira+Sans&family=Lato:wght@400;700&family=Young+Serif&display=swap');
+            </style>
+          </h2>
+          <img src="./assets/media/FISHING_MANIA_YOUTUBE_CHANNEL_LOGO-removebg-preview (2).png" alt="" />
+        </div>
+        <!-- Subtitle Section -->
+        <div class="footer__subtitle-section">
+          <h2 class="footer__subtitle">Address</h2>
+          <p class="footer__information">
+            simply dummy text of the printing<br />
+            and typesetting industry.<br />
+            Lorem Ipsum has been the industry's<br />
+            standard dummy text ever since the 1500s,
+          </p>
+          <p>v4fishry@gmail.com <br/>
+            +91-9775645565</p>
+        </div>
+        <!-- Links Section -->
+        <div class="footer__links-section">
+          <h2 class="footer__subtitle">Links</h2>
+          <p class="footer__information">
+            About <br />
+            Products<br />
+            Contact <br />
+          </p>
+        </div>
+        <!-- Newsletter Section -->
+        <div class="footer__newsletter-section">
+          <h2 class="footer__subtitle">Newsletter</h2>
+          <div class="footer__newsletter-content">
+            <img src="./assets/media/mdi_email.jpg" alt="" />
+            <div class="footer__input-container">
+              <input
+                type="email"
+                placeholder="Your email address"
+                class="footer__input"
+              />
+              <img src="./assets/media/arrow.jpg" alt="" />
+              <div class="footer__input-border"></div>
+
+            </div>
+          </div>
+          <!-- Social Links in Newsletter Section -->
+          <ul class="footer__social-links">
+            <li>
+              <a href="#" target="_blank" class="footer__social-link">
+                <img src="./assets/media/fb.jpg" alt="Facebook" />
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank" class="footer__social-link">
+                <img src="./assets/media/google.jpg" alt="Google" />
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank" class="footer__social-link">
+                <img src="./assets/media/insta.jpg" alt="Instagram" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!--=============== MAIN JS ===============-->
+  <script src="./assets/js/main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  
+<script>
+  function scrollDown() {
+    // Scroll down by 500 pixels (adjust as needed)
+    window.scrollBy({
+      top: 600,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const textElement = document.getElementById('typed-text');
+    const text = textElement.innerHTML;
+
+    textElement.innerHTML = '';
+
+   
+    let i = 0;
+    function type() {
+      if (i < text.length) {
+        textElement.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(type, 100); 
+      }
+    }
+
+    type();
+  });
+</script>
+
+  </body>
  
 
     
 
-
-    <main class="main" id="main">
-      <section
-        class="hero section"
-        id="home"
-        style="background-image: url('./assets/media/istockphoto-1405392637-1024x1024-transformed\ \(1\).jpeg')"
-      >
-       
-        <div class="hero__content">
-          <h1 class="hero__title">
-            <p> LOREM IPSUM DOOLOR SIT </p> <br />
-             <b>LOREM IPSUM <b></b><br />
-            <b><span> DOLOR SIt </span> <br /></b>
-            <b>
-              AMET ACCUMSAN</b>
-
-          </h1>
-          <div class="hero__buttons">
-            <button class="hero__button">Contact</button>
-            <button class="hero__button">Saviorplus</button>
-          </div>
-        </div>
-      </section>
-      
-      <!-- special -->
-      <section class="place section" id="place">
-        <div class="place__container container">
-          <div class="place__content grid">
-            <div class="place__images">
-              <img
-                src="./assets/media/about.jpg"
-                alt=""
-                class="place__img-big"
-              />
-            </div>
-            <div class="place__data">
-              <h2 class="section__title">
-                <b>Fish restaurant</b><br />
-              </h2>
-              <h5 class="place__title">Lorem Ipsum is simply <br />
-                dummy text of the printing and typesetting industry.<br/>
-                 Lorem Ipsum.</h5>
-              <p class="place__description">
-                Lorem Ipsum is simply dummy text of
-                <br/> the printing and typesetting industry. 
-                <br/>Lorem Ipsum has been the industry's 
-                <br/>standard dummy text ever since the 1500s, 
-                <br/>when an unknown printer took a galley of type 
-                <br/>and scrambled it to make a type specimen book. 
-                <br/>It has survived not only five centuries, 
-                <br/>but also the leap into electronic typesetting,
-                <br/> remaining essen.
-              </p>
-              <button class="place__button">Saviorplus</button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      
-
-     <!-- special -->
-     <div class="special section container" id="special">
-      <div class="special__container">
-        <div class="special__box">
-          <h2 class="section__title">
-            NO’S PRESTATIONS
-          </h2>
-          <p>
-            It is a long established fact that a reader will be
-            distracted by the readable content of a page.
-          </p>
-        </div>
-    
-        <div class="special__category">
-          <div class="image-container">
-            <img
-              src="./assets/media/fish4.jpg"
-              alt=""
-              class="special__img"
-            />
-            <div class="image-overlay">
-              <div>
-                <img src="./assets/media/bw_fish_stencil-removebg-preview.png" alt="fish image" class="btnimg"/>
-                <h5 class="img_title">PRESTATION 01</h5>
-              </div>
-              <p class="image-description">It is a long established fact that a reader will be
-                distracted by the readable content of a page.</p>
-              <button class="btn" style="text-align: center; margin: 0 auto;">Click here</button>
-            </div>
-          </div>
-          <div class="image-container">
-            <img
-              src="./assets/media/fish6.jpg"
-              alt=""
-              class="special__img"
-            />
-            <div class="image-overlay">
-              <div>
-                <img src="./assets/media/bw_straight_fish-removebg-preview.png" alt="fish image" class="btnimg"/>
-                <h5 class="img_title">PRESTATION 02</h5>
-              </div>
-              <p class="image-description">It is a long established fact that a reader will be
-                distracted by the readable content of a page.</p>
-              <button class="btn" style="text-align: center; margin: 0 auto;">Click here</button>
-            </div>
-          </div>
-          <div class="image-container">
-            <img
-              src="./assets/media/fish8.jpg"
-              alt=""
-              class="special__img"
-            />
-            <div class="image-overlay">
-              <div>
-                <img src="./assets/media/bw_fish_turning_stencil-removebg-preview.png" alt="fish image" class="btnimg"/>
-                <h5 class="img_title">PRESTATION 03</h5>
-              </div>
-              <p class="image-description">It is a long established fact that a reader will be
-                distracted by the readable content of a page.</p>
-              <button class="btn" style="text-align: center; margin: 0 auto;">Click here</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    
-      
-
-      <!-- products -->
-      <section class="products section" id="products">
-        <div class="products__container container">
-          <h2 class="section__title">
-            NO’S GALERIES
-          </h2>
-          <p>
-            It is a long established fact that a reader will be<br/>
-            distracted by the readable content of a page.
-          </p>
-      
-          <div class="products__content grid">
-            <!-- Product cards with images -->
-            <article class="products__card1">
-              <div class="products__shape">
-                <img
-                  src="./assets/media/fish.jpg"
-                  alt=""
-                  class="products__img1"
-                />
-              </div>
-            </article>
-            <article class="products__card2">
-              <div class="products__shape">
-                <img
-                  src="./assets/media/fish1.jpg"
-                  alt=""
-                  class="products__img"
-                />
-              </div>
-            </article>
-            <article class="products__card">
-              <div class="products__shape">
-                <img
-                  src="./assets/media/fish3.jpg"
-                  alt=""
-                  class="products__img"
-                />
-              </div>
-            </article>
-            <article class="products__card">
-              <div class="products__shape">
-                <img
-                  src="./assets/media/fish4.jpg"
-                  alt=""
-                  class="products__img"
-                />
-              </div>
-            </article>
-            <article class="products__card">
-              <div class="products__shape">
-                <img
-                  src="./assets/media/fish5.jpg"
-                  alt=""
-                  class="products__img"
-                />
-              </div>
-            </article>
-            <article class="products__card">
-              <div class="products__shape">
-                <img
-                  src="./assets/media/fish6.jpg"
-                  alt=""
-                  class="products__img"
-                />
-              </div>
-            </article>
-            <article class="products__card">
-              <div class="products__shape">
-                <img
-                  src="./assets/media/fish11.jpg"
-                  alt=""
-                  class="products__img"
-                />
-              </div>
-            </article>
-            <article class="products__card">
-              <div class "products__shape">
-                <img
-                  src="./assets/media/fish8.jpg"
-                  alt=""
-                  class="products__img"
-                />
-              </div>
-            </article>
-            <article class="products__card">
-              <div class="products__shape">
-                <img
-                  src="./assets/media/fish10.jpg"
-                  alt=""
-                  class="products__img"
-                />
-              </div>
-            </article>
-            <article class="products__card8">
-              <div class="products__shape">
-                <img
-                  src="./assets/media/fish7.jpg"
-                  alt=""
-                  class="products__img8"
-                />
-              </div>
-            </article>
-            <article class="products__card9">
-              <div class="products__shape">
-                <img
-                  src="./assets/media/fish8.jpg"
-                  alt=""
-                  class="products__img9"
-                />
-              </div>
-            </article>
-            <article class="products__card10">
-              <div class="products__shape">
-                <img
-                  src="./assets/media/fish1.jpg"
-                  alt=""
-                  class="products__img10"
-                />
-              </div>
-            </article>
-            
-          </div>
-          <button class="view-more-button">View More</button>
-        </div>
-      </section>
-      <section class="blog section" id="blog">
-        <div class="blog__container container">
-          <h2 class="section__title">NO’S AVIS CLIENTS</h2>
-          <h3>
-            It is a long established fact that a reader will<br/> 
-            be distracted by the readable content of a page.
-          </h3>
-      
-          <div class="blog__content grid">
-            <div class="blog__card">
-              <div class="blog__image">
-                <img src="./assets/media/img1.jpg" alt="" class="" />
-              </div>
-            </div>
-      
-            <div class="blog__card">
-              <div class="blog__image">
-                <img src="./assets/media/img2.jpg" alt="" class="" />
-              </div>
-            </div>
-      
-            <div class="blog__card">
-              <div class="blog__image">
-                <img src="./assets/media/img3.jpg" alt="" class="" />
-              </div>
-            </div>
-          </div>
-          <button class="view-more-button">View More</button>
-        </div>
-      </section>
-      
-      
-    </main>
-
-    
-    <footer class="footer" id="contacts" style="background-color: rgb(91, 125, 165);
-    ; border-top-left-radius: 300px;">
-      <div class="footer__container container">
-        <div class="footer__content">
-          <!-- Title Section -->
-          <div class="footer__title-section">
-            <h2 class="footer__main-title">V4 Fishery
-              <style>
-                @import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@700&family=Fira+Sans&family=Lato:wght@400;700&family=Young+Serif&display=swap');
-              </style>
-            </h2>
-            <img src="./assets/media/v4 logo.jpg" alt="" />
-          </div>
-          <!-- Subtitle Section -->
-          <div class="footer__subtitle-section">
-            <h2 class="footer__subtitle">Address</h2>
-            <p class="footer__information">
-              simply dummy text of the printing<br />
-              and typesetting industry.<br />
-              Lorem Ipsum has been the industry's<br />
-              standard dummy text ever since the 1500s,
-            </p>
-            <p>v4fishry@gmail.com <br/>
-              +91-9775645565</p>
-          </div>
-          <!-- Links Section -->
-          <div class="footer__links-section">
-            <h2 class="footer__subtitle">Links</h2>
-            <p class="footer__information">
-              About <br />
-              Products<br />
-              Contact <br />
-            </p>
-          </div>
-          <!-- Newsletter Section -->
-          <div class="footer__newsletter-section">
-            <h2 class="footer__subtitle">Newsletter</h2>
-            <div class="footer__newsletter-content">
-              <img src="./assets/media/mdi_email.jpg" alt="" />
-              <div class="footer__input-container">
-                <input
-                  type="email"
-                  placeholder="Your email address"
-                  class="footer__input"
-                />
-                <img src="./assets/media/arrow.jpg" alt="" />
-                <div class="footer__input-border"></div>
-
-              </div>
-            </div>
-            <!-- Social Links in Newsletter Section -->
-            <ul class="footer__social-links">
-              <li>
-                <a href="#" target="_blank" class="footer__social-link">
-                  <img src="./assets/media/fb.jpg" alt="Facebook" />
-                </a>
-              </li>
-              <li>
-                <a href="#" target="_blank" class="footer__social-link">
-                  <img src="./assets/media/google.jpg" alt="Google" />
-                </a>
-              </li>
-              <li>
-                <a href="#" target="_blank" class="footer__social-link">
-                  <img src="./assets/media/insta.jpg" alt="Instagram" />
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </footer>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <!--=============== MAIN JS ===============-->
-    <script src="./assets/js/main.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  </body>
-</html>

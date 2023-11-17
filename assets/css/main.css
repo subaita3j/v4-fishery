@@ -81,6 +81,7 @@ p {
 
 ul {
   list-style: none;
+  color:black;
 }
 
 a {
@@ -431,19 +432,12 @@ button {
 
 
 .image-container {
-  position: relative;
   width: 300px; /* Adjust as needed */
-  height: 200px; /* Adjust as needed */
+  height: 30%; /* Adjust as needed */
   overflow: hidden;
-  float: left;
-  margin-right: 20px; /* Adjust for spacing */
-}
-
-/* Style for the image */
-.image-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  margin-right: 0px;
+  border-radius: 50px; /* Adjust for spacing */
+  position: relative;
 }
 
 /* Style for the white layer */
@@ -462,7 +456,9 @@ button {
 .image-description {
   padding: 10px;
   text-align: center;
+  width:320px;
 }
+
 
 /* Hover effect */
 .image-container:hover .image-overlay {
@@ -813,12 +809,12 @@ button {
 /* For medium devices */
 @media screen and (min-width: 576px) {
   .special__category {
-    grid-template-columns: repeat(2, 200px);
+    grid-template-columns: repeat(2, 50px);
     column-gap: 3rem;
   }
 
   .products__content {
-    grid-template-columns: repeat(2, 200px);
+    grid-template-columns: repeat(2, 50px);
     padding-bottom: 3rem;
   }
 
@@ -879,7 +875,7 @@ button {
 
   .special__category {
     grid-template-columns: repeat(3, 250px);
-    column-gap: 8rem;
+    column-gap: 2%;
   }
 
   .products__filters {
